@@ -4,11 +4,21 @@ import {
   NavLink,
   Route,
   Routes,
+  useNavigate,
 } from 'react-router-dom';
 
+
+const Logout = () => {
+  const navigate = useNavigate()
+  return <button onClick={() => {navigate('/login')}}>登出</button>
+}
 const Todo = () => {
-  return <p>這是 Todo 頁面 
-  </p>;
+  return (
+    <>
+      <p>Todo</p>
+      <Logout />
+    </>
+  )
 };
 const Login = () => {
   return <p>這是登入頁面</p>;
